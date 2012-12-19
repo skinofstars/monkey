@@ -1,0 +1,25 @@
+{% extends "layout.html" %}
+
+{% block title %}Page title{% endblock %}
+
+{% block head %}
+  {{ super() }} {# apply parent block #}
+  <style type=text/css>
+    h1 { color: hotpink; }
+    h1 span, p.tagline { display: none; }
+  </style>
+  <script type=text/javascript>
+    $(function() {
+
+    });
+  </script>
+{% endblock %}
+
+{% block content %}
+  <h1>{{monkey}}</h1>
+{% endblock %}
+
+{% block footer %}
+    {{ super() }}
+    <p>Then more footer under</p>
+{% endblock %}
